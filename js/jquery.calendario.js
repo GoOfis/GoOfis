@@ -34,10 +34,10 @@
 			...
 		}
 		*/
-		weeks : [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ],
-		weekabbrs : [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ],
-		months : [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ],
-		monthabbrs : [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ],
+		weeks : [ 'Pazar', 'Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi' ],
+		weekabbrs : [ 'Pzr', 'Pzrts', 'Salı', 'Çarş', 'Perş', 'Cuma', 'Cmrts' ],
+		months : [ 'Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık' ],
+		monthabbrs : [ 'Oca', 'Şub', 'Mar', 'Nis', 'May', 'Haz', 'Tem', 'Aug', 'Eyl', 'Ekim', 'Kas', 'Ara' ],
 		// choose between values in options.weeks or options.weekabbrs
 		displayWeekAbbr : false,
 		// choose between values in options.months or options.monthabbrs

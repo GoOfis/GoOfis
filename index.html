@@ -24,7 +24,7 @@
 	<link rel="stylesheet" href="one-page/css/et-line.css" type="text/css" />
 	<link rel="stylesheet" href="css/animate.css" type="text/css" />
 	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
-	<link rel="stylesheet" href="css/calendario-2.css" type="text/css" />
+	<link rel="stylesheet" href="css/calendar.css" type="text/css" />
 
 	<link rel="stylesheet" href="one-page/css/fonts.css" type="text/css" />
 
@@ -40,7 +40,17 @@
 	============================================= -->
 	<title>Yeni Nesil Ofis Anlayışı | Go Ofis</title>
 
-	<style>.tp-caption { white-space: nowrap; }</style>
+	<style>
+		.tp-caption { white-space: nowrap; }
+		.bg-overlay { position: relative; }
+		.bg-overlay::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+			background-color: rgba(0,0,0, 0.5);
+		}
+	</style>
 
 </head>
 <body class="stretched">
@@ -76,6 +86,7 @@
 							<li><a href="#" data-href="#section-works"><div>Hizmetlerimiz</div></a></li>
 							<li><a href="#" data-href="#section-services"><div>Servislerimiz</div></a></li>
 							<li><a href="#" data-href="#section-blog"><div>Blog</div></a></li>
+							<li><a href="#" data-href="#section-calendar"><div>Etkinlikler</div></a></li>
 							<li><a href="#" data-href="#section-contact"><div>İletişim</div></a></li>
 						</ul>
 
@@ -98,9 +109,9 @@
 					<!-- START REVOLUTION SLIDER 5.1.4 fullscreen mode -->
 					<div id="rev_slider_op-fc" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.1.4">
 					<ul>    <!-- SLIDE  -->
-						<li class="dark" data-transition="fade" data-slotamount="1" data-masterspeed="1500" data-thumb="images/slider/rev/goofis-hero-1.jpg" data-delay="10000"  data-saveperformance="off" data-title="farklı çalış.">
+						<li class="dark bg-overlay" data-transition="fade" data-slotamount="1" data-masterspeed="1500" data-thumb="images/slider/rev/goofis-hero-1.jpg" data-delay="10000"  data-saveperformance="off" data-title="farklı çalış.">
 							<!-- MAIN IMAGE -->
-							<img src="images/slider/rev/goofis-hero-1.jpg"  alt="kenburns6"  data-bgposition="left center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="130" data-scaleend="100" data-bgpositionend="right center" >
+							<img src="images/slider/rev/goofis-hero-1.jpg" alt="kenburns6" data-bgposition="left center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="130" data-scaleend="100" data-bgpositionend="right center">
 							<!-- LAYERS -->
 
 							<!-- LAYER NR. 2 -->
@@ -158,9 +169,9 @@
 
 						</li>
 						<!-- SLIDE  -->
-						<li class="dark" data-transition="slideup" data-slotamount="1" data-masterspeed="1500" data-thumb="images/slider/rev/goofis-hero-3.jpg" data-delay="10000"  data-saveperformance="off"  data-title="farklı yaşa.">
+						<li class="dark bg-overlay" data-transition="slideup" data-slotamount="1" data-masterspeed="1500" data-thumb="images/slider/rev/goofis-hero-3.jpg" data-delay="10000"  data-saveperformance="off"  data-title="farklı yaşa.">
 							<!-- MAIN IMAGE -->
-							<img src="images/slider/rev/goofis-hero-3.jpg"  alt="kenburns6"  data-bgposition="center bottom" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-bgpositionend="center top" >
+							<img src="images/slider/rev/goofis-hero-3.jpg" alt="kenburns6" data-bgposition="center bottom" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-bgpositionend="center top" >
 							<!-- LAYERS -->
 
 							<!-- LAYER NR. 2 -->
@@ -604,6 +615,39 @@
 
 					<div class="section parallax nomargin dark" style="background-image: url('images/slider/rev/goofis-main-3.jpg'); padding: 150px 0; height: 80vh;" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -300px;"></div>
 
+					<div class="clear"></div>
+
+				</div>
+
+				<div id="section-calendar" class="page-section center nobottompadding">
+
+					<h2 class="center uppercase t300 ls3 font-body">Etkinlik Takvimi</h2>
+
+					<div class="clear bottommargin-lg topmargin-lg"></div>
+
+					<div class="parallax header-stick dark bg-overlay" style="padding: 60px 0; background-image: url('images/slider/rev/goofis-main-5.jpg'); height: auto;" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -500px;">
+
+						<div class="container clearfix">
+
+							<div class="events-calendar" style="z-index: 2;">
+								<div class="events-calendar-header clearfix">
+									<h3 class="calendar-month-year">
+										<span id="calendar-month" class="calendar-month"></span>
+										<span id="calendar-year" class="calendar-year"></span>
+										<nav>
+											<span id="calendar-prev" class="calendar-prev"><i class="icon-chevron-left"></i></span>
+											<span id="calendar-next" class="calendar-next"><i class="icon-chevron-right"></i></span>
+											<span id="calendar-current" class="calendar-current" title="Got to current date"><i class="icon-reload"></i></span>
+										</nav>
+									</h3>
+								</div>
+								<div id="calendar" class="fc-calendar-container"></div>
+							</div>
+
+						</div>
+
+					</div>
+
 				</div>
 
 				<div id="section-contact" class="page-section notoppadding" style="padding-bottom: 0;">
@@ -748,8 +792,9 @@
 	============================================= -->
 	<script src="js/jquery.js"></script>
 	<script src="js/plugins.js"></script>
-	<script src="js/calendario.js"></script>
 	<script src="demos/writer/js/hover3d.js" ></script>
+	<script src="js/jquery.calendario.js"></script>
+	<script src="js/events-data.js"></script>
 
 	<!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
 	<script src="include/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
@@ -775,6 +820,38 @@
 
 	<!-- Inline Scripts
 	============================================= -->
+	<script>
+
+		var cal = $( '#calendar' ).calendario( {
+				onDayClick : function( $el, $contentEl, dateProperties ) {
+
+					for( var key in dateProperties ) {
+						console.log( key + ' = ' + dateProperties[ key ] );
+					}
+
+				},
+				caldata : canvasEvents
+			} ),
+			$month = $( '#calendar-month' ).html( cal.getMonthName() ),
+			$year = $( '#calendar-year' ).html( cal.getYear() );
+
+		$( '#calendar-next' ).on( 'click', function() {
+			cal.gotoNextMonth( updateMonthYear );
+		} );
+		$( '#calendar-prev' ).on( 'click', function() {
+			cal.gotoPreviousMonth( updateMonthYear );
+		} );
+		$( '#calendar-current' ).on( 'click', function() {
+			cal.gotoNow( updateMonthYear );
+		} );
+
+		function updateMonthYear() {
+			$month.html( cal.getMonthName() );
+			$year.html( cal.getYear() );
+		};
+
+	</script>
+
 	<script>
 
 		jQuery(document).ready( function(){
