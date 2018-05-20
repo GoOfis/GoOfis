@@ -27,36 +27,41 @@
           <ul class="icons-list inactive-list">
             <li class="icon-item">
               <i class="icon-wifi-full"></i>
-              <span>Yüksek Hızlı İnternet</span>
+              <span class="is-hidden font-primary">Yüksek Hızlı İnternet</span>
+            </li>
+
+						<li class="icon-item">
+              <i class="icon-bucket"></i>
+              <span class="is-hidden font-primary">Günlük Temizlik</span>
+            </li>
+
+						<li class="icon-item">
+              <i class="icon-chart"></i>
+              <span class="is-hidden font-primary">Toplantı Odaları</span>
             </li>
 
             <li class="icon-item">
-              <i class="icon-food"></i>
-              <span>Mutfak</span>
-            </li>
-
-            <li class="icon-item">
-              <i class="icon-line2-cup"></i>
-              <span>Sıcak İçecekler</span>
-            </li>
-
-            <li class="icon-item">
-              <i class="icon-line2-lock"></i>
-              <span>Kilitli Dolap</span>
-            </li>
-
-            <li class="icon-item">
-              <i class="icon-comments-alt"></i>
-              <span>Lounge Alanları</span>
+              <i class="icon-calendar2"></i>
+              <span class="is-hidden font-primary">Haftalık Etkinlikler</span>
             </li>
 
             <li class="icon-item">
               <i class="icon-line-printer"></i>
-              <span>Printer</span>
+              <span class="is-hidden font-primary">Printer</span>
+            </li>
+
+            <li class="icon-item">
+              <i class="icon-line2-lock"></i>
+              <span class="is-hidden font-primary">Kilitli Dolap</span>
+            </li>
+
+            <li class="icon-item">
+              <i class="icon-comments-alt"></i>
+              <span class="is-hidden font-primary">Lounge Alanları</span>
             </li>
           </ul>
 
-          <button class="button capitalize button-circle">
+          <button id="showDetails" class="button capitalize button-circle">
             Detay
             <i class="icon-angle-down"></i>
           </button>
@@ -82,3 +87,33 @@
 
 	</div><!-- .portfolio-single-image end -->
 </div>
+
+<script type="text/javascript">
+
+var detailsBtn = document.querySelector('#showDetails');
+var spans = document.querySelectorAll('.icon-item span');
+var list = document.querySelector('.icons-list');
+var arrowIcon = document.querySelector('#showDetails i');
+
+detailsBtn.addEventListener('click', function(e) {
+
+	if (arrowIcon.classList.contains('icon-angle-down')) {
+		arrowIcon.classList.replace('icon-angle-down', 'icon-angle-up')
+	} else {
+		arrowIcon.classList.replace('icon-angle-up', 'icon-angle-down');
+	}
+
+	if (list.classList.contains('inactive-list')) {
+		list.classList.replace('inactive-list', 'active-list');
+	} else {
+		list.classList.replace('active-list', 'inactive-list');
+	}
+
+	for (let i = 0; i < spans.length; i++) {
+		spans[i].classList.toggle('is-hidden');
+		spans[i].classList.toggle('is-show');
+	}
+
+});
+
+</script>

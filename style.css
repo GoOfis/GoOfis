@@ -11,11 +11,71 @@
 
 /* CUSTOM CSS STARTS */
 
+.icon-squash {
+  display: block;
+  width: 56px;
+  height: 57px;
+  background: url('images/icons/squash-icon.png') center center no-repeat;
+  background-size: cover;
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+.icon-7-24 {
+  display: block;
+  width: 56px;
+  height: 57px;
+  background: url('images/icons/7-24-icon.png') center center no-repeat;
+  background-size: cover;
+  transform: scale(1.2);
+}
+
+.icon-rest {
+  display: block;
+  width: 56px;
+  height: 57px;
+  background: url('images/icons/rest-icon.jpg') center center no-repeat;
+  background-size: cover;
+  transform: scale(1.5);
+  opacity: 0.8;
+}
+
 .price-info {
   font-size: .9rem;
 }
 .star-info {
   font-size: .8rem;
+}
+
+.icon-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.inactive-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.active-list {
+  display: block;
+}
+
+.icon-item {
+  padding: .5rem;
+  line-height: 1rem !important;
+  display: block !important;
+  font-size: 1.2rem;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.is-show {
+  display: inline;
+  margin-left: 4px;
 }
 
 /* CUSTOM CSS ENDS */

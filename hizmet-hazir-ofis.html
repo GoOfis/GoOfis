@@ -11,7 +11,7 @@
 			<!-- Portfolio Single Content
 			============================================= -->
 			<div class="col-md-5">
-				<img style="height: 500px;" src="images/masonry/hazir-ofis-dikey.jpg" alt="Hazır Ofis">
+				<img style="height: 500px; object-fit: cover;" src="images/masonry/hazir-ofis-dikey.jpg" alt="Hazır Ofis">
 			</div>
 
 			<!-- Portfolio Single Content
@@ -23,17 +23,45 @@
 						İhtiyacınıza göre büyüyebilen ve küçülebilen, esnek duvarlara sahip yaratıcı ofisler! Maksimum iş verimi, minimum masraf ve ayrıcalıklı fırsatlara açılan kapınız burada!
 					</p>
 
-					<ul style="margin-left: 20px;">
-            <li>Atıştırmalıklar</li>
-            <li>Sıcak İçecekler</li>
-            <li>Minimum 10Mbps internet</li>
-            <li>Printer</li>
-            <li>Mutfak</li>
-            <li>Güvenlik</li>
-            <li>Lounge</li>
-          </ul>
+					<!-- ICONS LIST -->
+          <ul class="icons-list inactive-list">
+						<li class="icon-item">
+              <i class="icon-wifi-full"></i>
+              <span class="is-hidden font-primary">Yüksek Hızlı İnternet</span>
+            </li>
 
-          <button class="button capitalize button-circle">
+						<li class="icon-item">
+              <i class="icon-bucket"></i>
+              <span class="is-hidden font-primary">Günlük Temizlik</span>
+            </li>
+
+						<li class="icon-item">
+              <i class="icon-chart"></i>
+              <span class="is-hidden font-primary">Toplantı Odaları <small>(Aylık 4 saat ücretsiz kullanım)</small></span>
+            </li>
+
+            <li class="icon-item">
+              <i class="icon-calendar2"></i>
+              <span class="is-hidden font-primary">Haftalık Etkinlikler</span>
+            </li>
+
+            <li class="icon-item">
+              <i class="icon-line-printer"></i>
+              <span class="is-hidden font-primary">Printer</span>
+            </li>
+
+            <li class="icon-item">
+              <i class="icon-line2-lock"></i>
+              <span class="is-hidden font-primary">Kilitli Dolap</span>
+            </li>
+
+            <li class="icon-item">
+              <i class="icon-comments-alt"></i>
+              <span class="is-hidden font-primary">Lounge Alanları</span>
+            </li>
+					</ul>
+
+          <button id="showDetails" class="button capitalize button-circle">
             Detay
             <i class="icon-angle-down"></i>
           </button>
@@ -57,3 +85,33 @@
 
 	</div><!-- .portfolio-single-image end -->
 </div>
+
+<script type="text/javascript">
+
+var detailsBtn = document.querySelector('#showDetails');
+var spans = document.querySelectorAll('.icon-item span');
+var list = document.querySelector('.icons-list');
+var arrowIcon = document.querySelector('#showDetails i');
+
+detailsBtn.addEventListener('click', function(e) {
+
+	if (arrowIcon.classList.contains('icon-angle-down')) {
+		arrowIcon.classList.replace('icon-angle-down', 'icon-angle-up')
+	} else {
+		arrowIcon.classList.replace('icon-angle-up', 'icon-angle-down');
+	}
+
+	if (list.classList.contains('inactive-list')) {
+		list.classList.replace('inactive-list', 'active-list');
+	} else {
+		list.classList.replace('active-list', 'inactive-list');
+	}
+
+	for (let i = 0; i < spans.length; i++) {
+		spans[i].classList.toggle('is-hidden');
+		spans[i].classList.toggle('is-show');
+	}
+
+});
+
+</script>

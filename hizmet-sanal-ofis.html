@@ -11,7 +11,7 @@
 			<!-- Portfolio Single Content
 			============================================= -->
 			<div class="col-md-5">
-				<img style="height: 500px;" src="images/masonry/sanal-ofis-dikey.jpg" alt="Sanal Ofis">
+				<img style="height: 500px; object-fit: cover;" src="images/masonry/sanal-ofis-dikey.jpg" alt="Sanal Ofis">
 			</div>
 
 			<!-- Portfolio Single Content
@@ -23,20 +23,30 @@
 						Ofis adresiniz şehrin en prestijli iş merkezinde yer alsın! Şirketinize ait telefon numarası, sekreterlik hizmeti, posta ve kargo işlemleriniz bize emanet.
 					</p>
 
-					<ul style="margin-left: 20px;">
-            <li>Atıştırmalıklar</li>
-            <li>Bar</li>
-            <li>Sıcak İçecekler</li>
-            <li>Minimum 10Mbps internet</li>
-            <li>Adres Gösterme</li>
-            <li>Printer</li>
-            <li>Toplantı Odaları</li>
-            <li>Mutfak</li>
-            <li>Güvenlik</li>
-            <li>Lounge</li>
-          </ul>
+					<!-- ICONS LIST -->
+          <ul class="icons-list inactive-list">
+						<li class="icon-item">
+              <i class="icon-line2-envelope-letter"></i>
+              <span class="is-hidden font-primary">Adres Gösterme</span>
+            </li>
 
-          <button class="button capitalize button-circle">
+						<li class="icon-item">
+              <i class="icon-truck"></i>
+              <span class="is-hidden font-primary">Kargo Bekletme</span>
+            </li>
+
+						<li class="icon-item">
+              <i class="icon-chart"></i>
+              <span class="is-hidden font-primary">Toplantı Odaları <small>(Aylık 2 saat ücretsiz kullanım)</small></span>
+            </li>
+
+            <li class="icon-item">
+              <i class="icon-line2-earphones-alt"></i>
+              <span class="is-hidden font-primary">Sekreterlik</span>
+            </li>
+					</ul>
+
+          <button id="showDetails" class="button capitalize button-circle">
             Detay
             <i class="icon-angle-down"></i>
           </button>
@@ -60,3 +70,33 @@
 
 	</div><!-- .portfolio-single-image end -->
 </div>
+
+<script type="text/javascript">
+
+var detailsBtn = document.querySelector('#showDetails');
+var spans = document.querySelectorAll('.icon-item span');
+var list = document.querySelector('.icons-list');
+var arrowIcon = document.querySelector('#showDetails i');
+
+detailsBtn.addEventListener('click', function(e) {
+
+	if (arrowIcon.classList.contains('icon-angle-down')) {
+		arrowIcon.classList.replace('icon-angle-down', 'icon-angle-up')
+	} else {
+		arrowIcon.classList.replace('icon-angle-up', 'icon-angle-down');
+	}
+
+	if (list.classList.contains('inactive-list')) {
+		list.classList.replace('inactive-list', 'active-list');
+	} else {
+		list.classList.replace('active-list', 'inactive-list');
+	}
+
+	for (let i = 0; i < spans.length; i++) {
+		spans[i].classList.toggle('is-hidden');
+		spans[i].classList.toggle('is-show');
+	}
+
+});
+
+</script>
